@@ -110,7 +110,7 @@ Each subject page looks something like this:
 |                                                     |
 |          Spanish refresher for May 5, 2025          |
 |                                                     |
-|                  🙋  🙋  🙋  🙋                     |
+|                  🙋  🙋  🙋  💡                     |
 |                                                     |
 |                                                     |
 |   .-------------------------------------------.     |
@@ -149,8 +149,8 @@ Before submit:
 - Answered question-state emoji:    💡
 
 After submit:
-- Correctly answered question-state emoji:    🙋
-- Incorrectly answered question-state emoji:  💡
+- Correctly answered question-state emoji:    ✅
+- Incorrectly answered question-state emoji:  ❌
 
 #### Submit button
 
@@ -158,10 +158,10 @@ When the user clicks the submit button several things happen:
 
 1. The submit button is removed.
 2. The user's answers are compared to the correct answers for the questions.
-3. A green checkmark is displayed to the left of each correct answer (whether or not it was selected by the user).
-4. A red X is displayed to the left of each incorrect user selection.
-5. If the user got the answer right, the question-state emoji will change to a green checkmark.
-6. If the user got the answer wrong, the question-state emoji will change to a red X.
+3. A green checkmark (✅) is displayed to the left of each correct answer (whether or not it was selected by the user).
+4. A red X (❌) is displayed to the left of each incorrect user selection.
+5. If the user got the answer right, the question-state emoji will change to a green checkmark (✅).
+6. If the user got the answer wrong, the question-state emoji will change to a red X (❌).
 7. Below the each original question, an explanation of why the correct answer is the correct one
    is displayed. The explanation is displayed in a box with a light gray background. The
    explanation is displayed in a smaller font than the question text.
@@ -175,10 +175,10 @@ The final results will look something like this:
 
 💡 Slightly More Awesome: Spanish refresher for May 5, 2025
 
-   Grammar: V
-     Verbs: V
-Adjectives: X
-   Phrases: V
+   Grammar: ✅
+     Verbs: ✅
+Adjectives: ❌
+   Phrases: ✅
 
 ```
 
@@ -194,7 +194,7 @@ After clicking 'Submit', the display will look something like this:
 |                                                     |
 |          Spanish refresher for May 5, 2025          |
 |                                                     |
-|                  💡  💡  💡  🙋                     |
+|                  ✅  ✅  ❌  ✅                     |
 |                                                     |
 |   .-------------------------------------------.     |
 |   | What does the verb "nadar" mean?          |     |
@@ -214,10 +214,10 @@ After clicking 'Submit', the display will look something like this:
 |   .-------------------------------------------.     |
 |   | 💡 Slightly More...  for May 5, 2025      |     |
 |   |                                           |     |
-|   |     Grammar: V                            |     |
-|   |       Verbs: V                            |     |
-|   |  Adjectives: X                            |     |
-|   |     Phrases: V                            |     |
+|   |     Grammar: ✅                           |     |
+|   |       Verbs: ✅                           |     |
+|   |  Adjectives: ❌                           |     |
+|   |     Phrases: ✅                           |     |
 |   |                                           |     |
 |   '-------------------------------------------'     |
 |                                                     |
