@@ -194,15 +194,15 @@ After clicking 'Submit', the display will look something like this:
 |                                                     |
 |          Spanish refresher for May 5, 2025          |
 |                                                     |
-|                  ✅  ✅  ❌  ✅                     |
+|                  ✅  ❌  ❌  ✅                     |
 |                                                     |
 |   .-------------------------------------------.     |
 |   | What does the verb "nadar" mean?          |     |
 |   |                                           |     |
-|   |   A. To eat.                              |     |
-|   |   B. To walk.                             |     |
-|   |   C. To swim.                             |     |
-|   |   D. To juggle flaming cheetos.           |     |
+|   |     A. To eat.                            |     |
+|   | ❌  B. To walk.                           |     |
+|   | ✅  C. To swim.                           |     |
+|   |     D. To juggle flaming cheetos.         |     |
 |   |                                           |     |
 |   | The correct answer is "to swim"           |     |
 |   | because that's how Spanish works.         |     |
@@ -215,7 +215,7 @@ After clicking 'Submit', the display will look something like this:
 |   | 💡 Slightly More...  for May 5, 2025      |     |
 |   |                                           |     |
 |   |     Grammar: ✅                           |     |
-|   |       Verbs: ✅                           |     |
+|   |       Verbs: ❌                           |     |
 |   |  Adjectives: ❌                           |     |
 |   |     Phrases: ✅                           |     |
 |   |                                           |     |
