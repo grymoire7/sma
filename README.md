@@ -11,9 +11,6 @@ that have been curated for the subject. Once all four questions are answered, yo
 will see your results and have the option to share them with friends and family.
 Up to six months of result history are saved in your browser's local storage.
 
-The "Design notes" and "Implementation notes" sections below were used for
-prompting the AI assistan (aider/claude) and are left here for reference.
-
 ## How to Play
 
 1. Visit [slightlymoreawesome.com](https://slightlymoreawesome.com) to see your daily questions.
@@ -32,6 +29,46 @@ left here for reference.
 If you have an idea for a new feature or improvement, please open an issue or
 submit a pull request.  Currently, the project is in the early stages of
 development, so there are many opportunities for improvement.
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or newer)
+- npm (comes with Node.js)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/grymoire7/sma.git
+   cd sma
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to the URL shown in the terminal (typically http://localhost:5173)
+
+### Building for Production
+
+To build the app for production:
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory and can be served using any static file server.
+
+The "Design notes" and "Implementation notes" sections below were used for
+prompting the AI assistant (aider/claude) and are left here for reference.
 
 ## License
 
