@@ -13,7 +13,10 @@
         @mouseenter="showTooltip(index)"
         @mouseleave="hideTooltip"
       >
-        <span v-if="!submitted">{{ userAnswers[index] !== null ? '💡' : '🙋' }}</span>
+        <span v-if="!submitted">
+          <i v-if="userAnswers[index] !== null" class="fas fa-lightbulb" :class="getIconColor(index)"></i>
+          <i v-else class="fas fa-clipboard-question" :class="getIconColor(index)"></i>
+        </span>
         <span v-else>{{ isCorrect(index) ? '✅' : '❌' }}</span>
         
         <div 
@@ -55,12 +58,18 @@
       </div>
     </div>
 
-    <div class="mb-4">
+    <div class="mb-4 flex justify-between">
       <button 
         @click="toggleInstructions" 
         class="text-blue-600 hover:underline"
       >
         {{ showInstructions ? 'hide instructions' : 'show instructions' }}
+      </button>
+      <button 
+        @click="resetToday" 
+        class="text-blue-600 hover:underline"
+      >
+        reset today
       </button>
     </div>
 
@@ -147,6 +156,21 @@ const toggleInstructions = () => {
   showInstructions.value = !showInstructions.value;
 };
 
+const resetToday = () => {
+  // Clear local storage for today
+  const storageKey = `sma-${subject.value}-${new Date().toISOString().split('T')[0]}`;
+  localStorage.removeItem(storageKey);
+  
+  // Reset the quiz
+  initializeQuiz();
+  
+  // Show a flash message
+  flashMessage.value = "Today's questions have been reset!";
+  setTimeout(() => {
+    flashMessage.value = '';
+  }, 3000);
+};
+
 const showTooltip = (index) => {
   tooltipIndex.value = index;
   setTimeout(() => {
@@ -162,6 +186,11 @@ const hideTooltip = () => {
 
 const isCorrect = (index) => {
   return userAnswers.value[index] === selectedQuestions.value[index].correctAnswer;
+};
+
+const getIconColor = (index) => {
+  const colors = ['text-blue-500', 'text-green-500', 'text-red-500', 'text-purple-500'];
+  return colors[index % colors.length];
 };
 
 const submitAnswers = () => {
