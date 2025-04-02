@@ -1,24 +1,36 @@
 <template>
   <div class="min-h-screen bg-gray-100 flex flex-col">
     <header class="bg-white shadow p-4 flex justify-between items-center">
-      <div class="flex items-center">
+      <div class="flex items-center cursor-pointer" @click="goToHome">
         <span class="text-2xl mr-2">💡</span>
-        <h1 class="text-xl font-bold">Slightly More Awesome</h1>
+        <h1 class="text-xl font-bold">
+          Slightly More Awesome
+          <span v-if="currentSubject">: {{ currentSubject }}</span>
+        </h1>
       </div>
-      <div class="text-2xl cursor-pointer">≡</div>
+      <div class="text-2xl cursor-pointer relative" @click="toggleMenu">
+        ≡
+        <div v-if="showMenu" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+          <router-link 
+            to="/spanish" 
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            @click="showMenu = false"
+          >
+            Spanish
+          </router-link>
+          <a 
+            href="#" 
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            @click="showMenu = false"
+          >
+            Settings
+          </a>
+        </div>
+      </div>
     </header>
 
     <main class="flex-grow container mx-auto p-4">
-      <div class="bg-white shadow rounded-lg p-6 mb-6">
-        <h2 class="text-xl font-semibold mb-4">Welcome to Slightly More Awesome!</h2>
-        <p class="mb-2">
-          This is a daily, shareable, subject review app that will make you slightly more awesome at a subject of your choice.
-        </p>
-        <p>
-          Each day you are given a set of four questions in your subject. Once all four questions are answered, 
-          you will see your results and have the option to share them with friends and family.
-        </p>
-      </div>
+      <router-view />
     </main>
 
     <footer class="bg-white shadow p-4 text-center text-sm text-gray-600">
@@ -28,5 +40,33 @@
 </template>
 
 <script setup>
-// Component logic will go here
+import { ref, computed } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
+import spanishData from './data/subject-data-spanish.js';
+
+const router = useRouter();
+const route = useRoute();
+const showMenu = ref(false);
+
+const currentSubject = computed(() => {
+  if (route.params.subject === 'spanish' && spanishData) {
+    return spanishData.name;
+  }
+  return '';
+});
+
+const toggleMenu = () => {
+  showMenu.value = !showMenu.value;
+};
+
+const goToHome = () => {
+  router.push('/');
+};
+
+// Close menu when clicking outside
+window.addEventListener('click', (e) => {
+  if (showMenu.value && !e.target.closest('.relative')) {
+    showMenu.value = false;
+  }
+});
 </script>
