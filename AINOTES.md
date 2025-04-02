@@ -374,4 +374,5 @@ This site uses:
 - Vitest for testing
 - Local storage for storing user history data
 - Vue 3 for the user interface
+- Font Awesome Free for icons
 
