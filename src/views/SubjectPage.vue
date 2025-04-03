@@ -9,13 +9,20 @@
         v-for="(category, index) in selectedCategories" 
         :key="category.name"
         class="text-3xl cursor-pointer relative"
+        :class="{'transform scale-110': currentQuestionIndex === index}"
         @click="currentQuestionIndex = index"
         @mouseenter="showTooltip(index)"
         @mouseleave="hideTooltip"
       >
         <span v-if="!submitted">
-          <i v-if="userAnswers[index] !== null" class="fas fa-lightbulb" :class="getIconColor(index)"></i>
-          <i v-else class="fas fa-clipboard-question" :class="getIconColor(index)"></i>
+          <i v-if="userAnswers[index] !== null" 
+             class="fas fa-lightbulb" 
+             :class="[getIconColor(index), 
+                     {'filter drop-shadow-glow animate-pulse-fast': currentQuestionIndex === index}]"></i>
+          <i v-else 
+             class="fas fa-clipboard-question" 
+             :class="[getIconColor(index), 
+                     {'filter drop-shadow-glow animate-pulse-fast': currentQuestionIndex === index}]"></i>
         </span>
         <span v-else>{{ isCorrect(index) ? '✅' : '❌' }}</span>
         
