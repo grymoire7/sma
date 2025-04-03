@@ -56,13 +56,14 @@ const router = useRouter();
 const route = useRoute();
 const showMenu = ref(false);
 
+// Create a map of subject paths to their data
+const subjectDataMap = {
+  'spanish': spanishData,
+  'roman-empire': romanEmpireData
+};
+
 const currentSubject = computed(() => {
-  if (route.params.subject === 'spanish' && spanishData) {
-    return spanishData.name;
-  } else if (route.params.subject === 'roman-empire' && romanEmpireData) {
-    return romanEmpireData.name;
-  }
-  return '';
+  return subjectDataMap[route.params.subject]?.name || '';
 });
 
 const toggleMenu = () => {

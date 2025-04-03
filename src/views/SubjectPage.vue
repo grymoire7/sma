@@ -123,13 +123,15 @@ const route = useRoute();
 const router = useRouter();
 const subject = computed(() => route.params.subject);
 
+// Create a map of subject paths to their data
+const subjectDataMap = {
+  'spanish': spanishData,
+  'roman-empire': romanEmpireData
+};
+
 // Get the appropriate subject data
 const subjectData = ref({});
-if (subject.value === 'spanish') {
-  subjectData.value = spanishData;
-} else if (subject.value === 'roman-empire') {
-  subjectData.value = romanEmpireData;
-}
+subjectData.value = subjectDataMap[subject.value] || null;
 
 const today = computed(() => {
   const date = new Date();
@@ -303,12 +305,6 @@ watch([userAnswers, submitted], () => {
     }));
   }
 }, { deep: true });
-
-// Create a map of subject paths to their data
-const subjectDataMap = {
-  'spanish': spanishData,
-  'roman-empire': romanEmpireData
-};
 
 // Watch for route changes to update the subject data
 watch(() => route.params.subject, (newSubject) => {
