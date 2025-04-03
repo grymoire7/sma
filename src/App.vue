@@ -18,6 +18,13 @@
           >
             Spanish
           </router-link>
+          <router-link 
+            to="/roman-empire" 
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            @click="showMenu = false"
+          >
+            Roman Empire
+          </router-link>
           <a 
             href="#" 
             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -43,6 +50,7 @@
 import { ref, computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import spanishData from './data/subject-data-spanish.js';
+import romanEmpireData from './data/subject-data-roman-empire.js';
 
 const router = useRouter();
 const route = useRoute();
@@ -51,6 +59,8 @@ const showMenu = ref(false);
 const currentSubject = computed(() => {
   if (route.params.subject === 'spanish' && spanishData) {
     return spanishData.name;
+  } else if (route.params.subject === 'roman-empire' && romanEmpireData) {
+    return romanEmpireData.name;
   }
   return '';
 });

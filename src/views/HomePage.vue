@@ -29,6 +29,7 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import spanishData from '../data/subject-data-spanish.js';
+import romanEmpireData from '../data/subject-data-roman-empire.js';
 
 const router = useRouter();
 
@@ -37,6 +38,11 @@ const subjects = ref([
     name: spanishData.name,
     description: spanishData.description,
     path: 'spanish'
+  },
+  {
+    name: romanEmpireData.name,
+    description: romanEmpireData.description,
+    path: 'roman-empire'
   }
 ]);
 

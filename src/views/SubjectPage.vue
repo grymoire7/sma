@@ -117,13 +117,19 @@
 import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import spanishData from '../data/subject-data-spanish.js';
+import romanEmpireData from '../data/subject-data-roman-empire.js';
 
 const route = useRoute();
 const router = useRouter();
 const subject = computed(() => route.params.subject);
 
-// For now, we only have Spanish data
-const subjectData = ref(subject.value === 'spanish' ? spanishData : {});
+// Get the appropriate subject data
+const subjectData = ref({});
+if (subject.value === 'spanish') {
+  subjectData.value = spanishData;
+} else if (subject.value === 'roman-empire') {
+  subjectData.value = romanEmpireData;
+}
 
 const today = computed(() => {
   const date = new Date();
@@ -300,8 +306,10 @@ watch([userAnswers, submitted], () => {
 
 onMounted(() => {
   if (subject.value === 'spanish') {
-    // Make sure subjectData is properly set
     subjectData.value = spanishData;
+    checkPreviousResults();
+  } else if (subject.value === 'roman-empire') {
+    subjectData.value = romanEmpireData;
     checkPreviousResults();
   } else {
     // Redirect to home if subject not found
