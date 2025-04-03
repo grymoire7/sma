@@ -304,23 +304,25 @@ watch([userAnswers, submitted], () => {
   }
 }, { deep: true });
 
+// Create a map of subject paths to their data
+const subjectDataMap = {
+  'spanish': spanishData,
+  'roman-empire': romanEmpireData
+};
+
 // Watch for route changes to update the subject data
 watch(() => route.params.subject, (newSubject) => {
-  if (newSubject === 'spanish') {
-    subjectData.value = spanishData;
+  if (subjectDataMap[newSubject]) {
+    // Set the subject data based on the route
+    subjectData.value = subjectDataMap[newSubject];
+    
     // Reset these values to ensure we get fresh questions for the new subject
     selectedCategories.value = [];
     selectedQuestions.value = [];
     userAnswers.value = [null, null, null, null];
     submitted.value = false;
-    checkPreviousResults();
-  } else if (newSubject === 'roman-empire') {
-    subjectData.value = romanEmpireData;
-    // Reset these values to ensure we get fresh questions for the new subject
-    selectedCategories.value = [];
-    selectedQuestions.value = [];
-    userAnswers.value = [null, null, null, null];
-    submitted.value = false;
+    
+    // Check for previous results or initialize new quiz
     checkPreviousResults();
   } else {
     // Redirect to home if subject not found
