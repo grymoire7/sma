@@ -304,16 +304,21 @@ watch([userAnswers, submitted], () => {
   }
 }, { deep: true });
 
-onMounted(() => {
-  if (subject.value === 'spanish') {
+// Watch for route changes to update the subject data
+watch(() => route.params.subject, (newSubject) => {
+  if (newSubject === 'spanish') {
     subjectData.value = spanishData;
     checkPreviousResults();
-  } else if (subject.value === 'roman-empire') {
+  } else if (newSubject === 'roman-empire') {
     subjectData.value = romanEmpireData;
     checkPreviousResults();
   } else {
     // Redirect to home if subject not found
     router.push('/');
   }
+}, { immediate: true });
+
+onMounted(() => {
+  // Initial setup is now handled by the watcher with immediate: true
 });
 </script>
