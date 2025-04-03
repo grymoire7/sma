@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-opacity-90 p-6 rounded-lg shadow">
     <div class="bg-white shadow rounded-lg p-6 mb-6">
       <h2 class="text-xl font-semibold mb-4">Welcome to Slightly More Awesome!</h2>
       <p class="mb-2">

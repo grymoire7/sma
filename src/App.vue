@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen bg-gray-100 flex flex-col">
-    <header class="bg-white shadow p-4 flex justify-between items-center">
+  <div class="min-h-screen flex flex-col">
+    <header class="bg-green-700 text-white shadow p-4 flex justify-between items-center">
       <div class="flex items-center cursor-pointer" @click="goToHome">
-        <span class="text-2xl mr-2">💡</span>
+        <span class="fas fa-lightbulb text-blue-200 text-2xl mr-2"></span>
         <h1 class="text-xl font-bold">
           Slightly More Awesome
           <span v-if="currentSubject">: {{ currentSubject }}</span>
@@ -10,7 +10,7 @@
       </div>
       <div class="text-2xl cursor-pointer relative" @click="toggleMenu">
         ≡
-        <div v-if="showMenu" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+        <div v-if="showMenu" class="absolute right-0 mt-2 w-48 bg-white text-gray-700 rounded-md shadow-lg py-1 z-10">
           <router-link 
             to="/spanish" 
             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -29,11 +29,11 @@
       </div>
     </header>
 
-    <main class="flex-grow container mx-auto p-4">
+    <main class="flex-grow container mx-auto p-4 relative z-10 my-4">
       <router-view />
     </main>
 
-    <footer class="bg-white shadow p-4 text-center text-sm text-gray-600">
+    <footer class="bg-green-700 text-white shadow p-4 text-center text-sm">
       Copyright 2025 Slightly More Awesome
     </footer>
   </div>

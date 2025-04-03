@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow">
     <h2 class="text-xl font-semibold text-center mb-4">
       {{ subjectData.name }} refresher for {{ today }}
     </h2>
