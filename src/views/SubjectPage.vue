@@ -91,8 +91,8 @@
       
       <div class="space-y-2">
         <div v-for="(category, index) in selectedCategories" :key="category.name" class="flex">
-          <span class="w-24 font-medium">{{ category.name }}:</span>
           <span>{{ isCorrect(index) ? '✅' : '❌' }}</span>
+          <span class="w-24 font-medium pl-3">{{ category.name }}</span>
         </div>
       </div>
     </div>
@@ -206,7 +206,7 @@ const submitAnswers = () => {
   // Generate results text
   const resultsText = `💡 Slightly More Awesome: ${subjectData.value.name} for ${today.value}\n\n` +
     selectedCategories.value.map((category, index) => 
-      `${category.name}: ${isCorrect(index) ? '✅' : '❌'}`
+      `${isCorrect(index) ? '✅' : '❌'} ${category.name}`
     ).join('\n');
   
   // Copy to clipboard
