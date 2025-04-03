@@ -10,7 +10,7 @@
       </div>
       <div class="text-2xl cursor-pointer relative" @click="toggleMenu">
         ≡
-        <div v-if="showMenu" class="absolute right-0 mt-2 w-48 bg-white text-gray-700 rounded-md shadow-lg py-1 z-10">
+        <div v-if="showMenu" class="absolute right-0 mt-2 w-48 bg-white text-gray-700 rounded-md shadow-lg py-1 z-50">
           <router-link 
             to="/spanish" 
             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -29,7 +29,7 @@
       </div>
     </header>
 
-    <main class="flex-grow container mx-auto p-4 relative z-10 my-4">
+    <main class="flex-grow container mx-auto p-4 relative z-0 my-4">
       <router-view />
     </main>
 
