@@ -308,9 +308,19 @@ watch([userAnswers, submitted], () => {
 watch(() => route.params.subject, (newSubject) => {
   if (newSubject === 'spanish') {
     subjectData.value = spanishData;
+    // Reset these values to ensure we get fresh questions for the new subject
+    selectedCategories.value = [];
+    selectedQuestions.value = [];
+    userAnswers.value = [null, null, null, null];
+    submitted.value = false;
     checkPreviousResults();
   } else if (newSubject === 'roman-empire') {
     subjectData.value = romanEmpireData;
+    // Reset these values to ensure we get fresh questions for the new subject
+    selectedCategories.value = [];
+    selectedQuestions.value = [];
+    userAnswers.value = [null, null, null, null];
+    submitted.value = false;
     checkPreviousResults();
   } else {
     // Redirect to home if subject not found
