@@ -81,7 +81,7 @@
     </div>
 
     <div v-if="showInstructions" class="mb-6 text-gray-600">
-      <p>Click on one of the options to select or change your answer or on one of the four emoji to switch to another question. Click on the submit button to submit your answers.</p>
+      <p>Click on one of the options to select or change your answer. Click on each emoji to switch to another question. When you think you've gotten them all, click Submit for the answers. Good luck!</p>
     </div>
 
     <div v-if="submitted" class="bg-white shadow rounded-lg p-6 mb-6">
