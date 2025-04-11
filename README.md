@@ -72,7 +72,7 @@ prompting the AI assistant (aider/claude) and are left here for reference.
 
 ## License
 
-Stormoji is released under the [GNU General Public License v3.0](LICENSE.md).
+Slightly More Awesome is released under the [GNU General Public License v3.0](LICENSE.md).
 
 ## Acknowledgements
 
