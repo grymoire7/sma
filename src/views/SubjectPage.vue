@@ -9,7 +9,7 @@
         v-for="(category, index) in selectedCategories" 
         :key="category.name"
         class="text-3xl cursor-pointer relative"
-        :class="{'transform scale-110': currentQuestionIndex === index}"
+        :class="{'selected-icon': currentQuestionIndex === index}"
         @click="currentQuestionIndex = index"
         @mouseenter="showTooltip(index)"
         @mouseleave="hideTooltip"
@@ -330,3 +330,10 @@ onMounted(() => {
   // Initial setup is now handled by the watcher with immediate: true
 });
 </script>
+
+<style scoped>
+.selected-icon {
+  transform: scale(1.5);
+  transition: transform 0.2s ease;
+}
+</style>
