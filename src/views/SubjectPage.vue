@@ -116,6 +116,7 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { loadSubjectData } from '../config/subjects.js';
 
 const route = useRoute();
 const router = useRouter();
@@ -123,30 +124,6 @@ const subject = computed(() => route.params.subject);
 
 // Get the appropriate subject data
 const subjectData = ref({});
-
-// Function to dynamically load subject data
-const loadSubjectData = async (subjectPath) => {
-  try {
-    let data;
-    switch (subjectPath) {
-      case 'spanish':
-        data = await import('../data/subject-data-spanish.js');
-        break;
-      case 'roman-empire':
-        data = await import('../data/subject-data-roman-empire.js');
-        break;
-      case 'trivia':
-        data = await import('../data/subject-data-trivia.js');
-        break;
-      default:
-        throw new Error(`Unknown subject: ${subjectPath}`);
-    }
-    return data.default;
-  } catch (error) {
-    console.error('Error loading subject data:', error);
-    return null;
-  }
-};
 
 const today = computed(() => {
   const date = new Date();

@@ -12,18 +12,13 @@
         ≡
         <div v-if="showMenu" class="absolute right-0 mt-2 w-48 bg-white text-gray-700 rounded-md shadow-lg py-1 z-50">
           <router-link 
-            to="/spanish" 
+            v-for="subject in menuSubjects"
+            :key="subject.path"
+            :to="`/${subject.path}`"
             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             @click="showMenu = false"
           >
-            Spanish
-          </router-link>
-          <router-link 
-            to="/roman-empire" 
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            @click="showMenu = false"
-          >
-            Roman Empire
+            {{ subject.name }}
           </router-link>
           <a 
             href="#" 
@@ -49,20 +44,16 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
+import { getSubjectByPath, subjects } from './config/subjects.js';
 
 const router = useRouter();
 const route = useRoute();
 const showMenu = ref(false);
-
-// Create a map of subject paths to their display names
-const subjectNameMap = {
-  'spanish': 'Spanish',
-  'roman-empire': 'Roman Empire',
-  'trivia': 'Trivia'
-};
+const menuSubjects = ref(subjects);
 
 const currentSubject = computed(() => {
-  return subjectNameMap[route.params.subject] || '';
+  const subject = getSubjectByPath(route.params.subject);
+  return subject ? subject.name : '';
 });
 
 const toggleMenu = () => {

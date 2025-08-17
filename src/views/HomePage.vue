@@ -28,26 +28,11 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { subjects as subjectConfig } from '../config/subjects.js';
 
 const router = useRouter();
 
-const subjects = ref([
-  {
-    name: 'Spanish',
-    description: 'Test your Spanish vocabulary and grammar skills',
-    path: 'spanish'
-  },
-  {
-    name: 'Roman Empire',
-    description: 'Explore the history and culture of ancient Rome',
-    path: 'roman-empire'
-  },
-  {
-    name: 'Trivia',
-    description: 'General knowledge questions across various topics',
-    path: 'trivia'
-  }
-]);
+const subjects = ref(subjectConfig);
 
 const goToSubject = (path) => {
   router.push(`/${path}`);
