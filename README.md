@@ -67,8 +67,16 @@ npm run build
 
 The built files will be in the `dist` directory and can be served using any static file server.
 
-The "Design notes" and "Implementation notes" sections below were used for
-prompting the AI assistant (aider/claude) and are left here for reference.
+### Adding subjects and updating questions
+
+1. To add a new subject or update questions, modify the JSON files in the
+   `src/data` directory. Each subject has its own file containing an array of
+   questions. Follow the existing format to ensure compatibility.
+
+2. If you are adding a new subject, add a new entry in `src/config/subjects.js`
+   in the `subjects` array for the new subject.
+
+That's it! The app will automatically pick up the new subject and/or questions and display them.
 
 ## License
 
