@@ -118,6 +118,7 @@ import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import spanishData from '../data/subject-data-spanish.js';
 import romanEmpireData from '../data/subject-data-roman-empire.js';
+import triviaData from '../data/subject-data-trivia.js';
 
 const route = useRoute();
 const router = useRouter();
@@ -126,7 +127,8 @@ const subject = computed(() => route.params.subject);
 // Create a map of subject paths to their data
 const subjectDataMap = {
   'spanish': spanishData,
-  'roman-empire': romanEmpireData
+  'roman-empire': romanEmpireData,
+  'trivia': triviaData
 };
 
 // Get the appropriate subject data

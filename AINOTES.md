@@ -137,21 +137,6 @@ Each subject page looks something like this:
 
 ```
 
-#### Question state emojis
-
-The question-state emojis are displayed in a row below the subtitle. Each emoji
-corresponds to a randomly selected question from a differnt group. Each question-state
-emoji can be in one of two states before user clicks submit and in one of two states
-after the user clicks submit. A different emoji is displayed depending on the state.
-
-Before submit:
-- Unanswered question-state emoji:  🙋
-- Answered question-state emoji:    💡
-
-After submit:
-- Correctly answered question-state emoji:    ✅
-- Incorrectly answered question-state emoji:  ❌
-
 #### Submit button
 
 When the user clicks the submit button several things happen:
