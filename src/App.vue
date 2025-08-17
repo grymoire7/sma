@@ -49,21 +49,20 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import spanishData from './data/subject-data-spanish.js';
-import romanEmpireData from './data/subject-data-roman-empire.js';
 
 const router = useRouter();
 const route = useRoute();
 const showMenu = ref(false);
 
-// Create a map of subject paths to their data
-const subjectDataMap = {
-  'spanish': spanishData,
-  'roman-empire': romanEmpireData
+// Create a map of subject paths to their display names
+const subjectNameMap = {
+  'spanish': 'Spanish',
+  'roman-empire': 'Roman Empire',
+  'trivia': 'Trivia'
 };
 
 const currentSubject = computed(() => {
-  return subjectDataMap[route.params.subject]?.name || '';
+  return subjectNameMap[route.params.subject] || '';
 });
 
 const toggleMenu = () => {

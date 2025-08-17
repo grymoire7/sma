@@ -116,24 +116,37 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import spanishData from '../data/subject-data-spanish.js';
-import romanEmpireData from '../data/subject-data-roman-empire.js';
-import triviaData from '../data/subject-data-trivia.js';
 
 const route = useRoute();
 const router = useRouter();
 const subject = computed(() => route.params.subject);
 
-// Create a map of subject paths to their data
-const subjectDataMap = {
-  'spanish': spanishData,
-  'roman-empire': romanEmpireData,
-  'trivia': triviaData
-};
-
 // Get the appropriate subject data
 const subjectData = ref({});
-subjectData.value = subjectDataMap[subject.value] || null;
+
+// Function to dynamically load subject data
+const loadSubjectData = async (subjectPath) => {
+  try {
+    let data;
+    switch (subjectPath) {
+      case 'spanish':
+        data = await import('../data/subject-data-spanish.js');
+        break;
+      case 'roman-empire':
+        data = await import('../data/subject-data-roman-empire.js');
+        break;
+      case 'trivia':
+        data = await import('../data/subject-data-trivia.js');
+        break;
+      default:
+        throw new Error(`Unknown subject: ${subjectPath}`);
+    }
+    return data.default;
+  } catch (error) {
+    console.error('Error loading subject data:', error);
+    return null;
+  }
+};
 
 const today = computed(() => {
   const date = new Date();
@@ -309,10 +322,12 @@ watch([userAnswers, submitted], () => {
 }, { deep: true });
 
 // Watch for route changes to update the subject data
-watch(() => route.params.subject, (newSubject) => {
-  if (subjectDataMap[newSubject]) {
+watch(() => route.params.subject, async (newSubject) => {
+  const data = await loadSubjectData(newSubject);
+  
+  if (data) {
     // Set the subject data based on the route
-    subjectData.value = subjectDataMap[newSubject];
+    subjectData.value = data;
     
     // Reset these values to ensure we get fresh questions for the new subject
     selectedCategories.value = [];

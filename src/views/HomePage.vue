@@ -28,26 +28,23 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import spanishData from '../data/subject-data-spanish.js';
-import romanEmpireData from '../data/subject-data-roman-empire.js';
-import triviaData from '../data/subject-data-trivia.js';
 
 const router = useRouter();
 
 const subjects = ref([
   {
-    name: spanishData.name,
-    description: spanishData.description,
+    name: 'Spanish',
+    description: 'Test your Spanish vocabulary and grammar skills',
     path: 'spanish'
   },
   {
-    name: romanEmpireData.name,
-    description: romanEmpireData.description,
+    name: 'Roman Empire',
+    description: 'Explore the history and culture of ancient Rome',
     path: 'roman-empire'
   },
   {
-    name: triviaData.name,
-    description: triviaData.description,
+    name: 'Trivia',
+    description: 'General knowledge questions across various topics',
     path: 'trivia'
   }
 ]);
