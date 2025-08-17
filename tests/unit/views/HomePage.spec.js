@@ -1,9 +1,7 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../../../src/views/HomePage.vue'
-import spanishData from '../../../src/data/subject-data-spanish.js'
-import romanEmpireData from '../../../src/data/subject-data-roman-empire.js'
 
 describe('HomePage.vue', () => {
   it('renders the welcome message', () => {
@@ -37,15 +35,17 @@ describe('HomePage.vue', () => {
 
     // Check that we have the correct number of subject cards
     const subjectCards = wrapper.findAll('.bg-white.shadow.rounded-lg.p-4')
-    expect(subjectCards.length).toBe(2)
+    expect(subjectCards.length).toBe(3)
 
-    // Check that the Spanish subject is displayed
-    expect(wrapper.text()).toContain(spanishData.name)
-    expect(wrapper.text()).toContain(spanishData.description)
+    // Check that the subjects are displayed
+    expect(wrapper.text()).toContain('Spanish')
+    expect(wrapper.text()).toContain('Test your Spanish vocabulary and grammar skills')
 
-    // Check that the Roman Empire subject is displayed
-    expect(wrapper.text()).toContain(romanEmpireData.name)
-    expect(wrapper.text()).toContain(romanEmpireData.description)
+    expect(wrapper.text()).toContain('Roman Empire')
+    expect(wrapper.text()).toContain('Explore the history and culture of ancient Rome')
+
+    expect(wrapper.text()).toContain('Trivia')
+    expect(wrapper.text()).toContain('General knowledge questions across various topics')
   })
 
   it('navigates to subject page when card is clicked', async () => {
