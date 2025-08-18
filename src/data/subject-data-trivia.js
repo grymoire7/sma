@@ -6,6 +6,116 @@ export default {
       "name": "History",
       "questions": [
         {
+          "text": "Which ancient wonder of the world was located in Alexandria, Egypt?",
+          "answers": [
+            "The Colossus of Rhodes",
+            "The Lighthouse of Alexandria",
+            "The Hanging Gardens of Babylon",
+            "The Temple of Artemis"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The Lighthouse of Alexandria (Pharos of Alexandria) was one of the Seven Wonders of the Ancient World, standing over 100 meters tall and guiding ships safely into the harbor."
+        },
+        {
+          "text": "Who was the first Roman Emperor?",
+          "answers": [
+            "Julius Caesar",
+            "Augustus",
+            "Nero",
+            "Constantine"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Augustus (born Octavian) was the first Roman Emperor, ruling from 27 BCE to 14 CE. Julius Caesar was never officially emperor, though he did become dictator."
+        },
+        {
+          "text": "The Black Death pandemic of the 14th century was primarily caused by which disease?",
+          "answers": [
+            "Smallpox",
+            "Cholera",
+            "Bubonic plague",
+            "Typhus"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The Black Death was caused by the bubonic plague, spread by fleas on rats. It killed an estimated 30-60% of Europe's population between 1347-1351."
+        },
+        {
+          "text": "Which battle is considered the turning point of World War II in the Pacific?",
+          "answers": [
+            "Battle of Pearl Harbor",
+            "Battle of Midway",
+            "Battle of Iwo Jima",
+            "Battle of the Coral Sea"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The Battle of Midway (June 4-7, 1942) was the decisive naval battle where the US defeated a larger Japanese fleet, marking the beginning of Japan's decline in the Pacific."
+        },
+        {
+          "text": "Who wrote the Communist Manifesto?",
+          "answers": [
+            "Vladimir Lenin",
+            "Joseph Stalin",
+            "Karl Marx and Friedrich Engels",
+            "Leon Trotsky"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Karl Marx and Friedrich Engels co-authored 'The Communist Manifesto' in 1848, which outlined their theory of class struggle and communist revolution."
+        },
+        {
+          "text": "The ancient city of Carthage was located in present-day:",
+          "answers": [
+            "Libya",
+            "Tunisia",
+            "Algeria",
+            "Morocco"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Carthage was located near present-day Tunis, Tunisia. It was a powerful city-state and Rome's main rival during the Punic Wars (264-146 BCE)."
+        },
+        {
+          "text": "Which treaty ended World War I?",
+          "answers": [
+            "Treaty of Versailles",
+            "Treaty of Paris",
+            "Treaty of Vienna",
+            "Treaty of Westphalia"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The Treaty of Versailles, signed on June 28, 1919, officially ended the war between Germany and the Allied Powers, imposing harsh penalties on Germany."
+        },
+        {
+          "text": "The Rosetta Stone was crucial for deciphering which ancient writing system?",
+          "answers": [
+            "Cuneiform",
+            "Linear B",
+            "Egyptian hieroglyphs",
+            "Phoenician script"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The Rosetta Stone contained the same text in Greek, Demotic, and hieroglyphics, allowing scholars like Jean-François Champollion to finally decode Egyptian hieroglyphs in 1822."
+        },
+        {
+          "text": "Which empire was ruled by Suleiman the Magnificent?",
+          "answers": [
+            "Mughal Empire",
+            "Ottoman Empire",
+            "Persian Empire",
+            "Byzantine Empire"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Suleiman the Magnificent ruled the Ottoman Empire from 1520-1566, during its golden age when it controlled much of Southeast Europe, Western Asia, and North Africa."
+        },
+        {
+          "text": "The Opium Wars were fought between China and which European power?",
+          "answers": [
+            "France",
+            "Portugal",
+            "Great Britain",
+            "Netherlands"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The Opium Wars (1839-1842 and 1856-1860) were fought between China and Great Britain, primarily over trade disputes and Britain's opium trade in China."
+        },
+        {
           "text": "Who was the first President of the United States?",
           "answers": [
             "Thomas Jefferson",
@@ -154,6 +264,94 @@ export default {
           "explanation": "Diamond is the hardest naturally occurring substance found on Earth."
         },
         {
+          "text": "Which planet in our solar system has the most moons?",
+          "answers": [
+            "Jupiter",
+            "Saturn",
+            "Neptune",
+            "Uranus"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Saturn has the most confirmed moons with over 80 natural satellites, including its famous moon Titan."
+        },
+        {
+          "text": "What type of blood cell is responsible for carrying oxygen?",
+          "answers": [
+            "White blood cells",
+            "Platelets",
+            "Red blood cells",
+            "Plasma cells"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Red blood cells contain hemoglobin, which binds to oxygen and carries it throughout the body."
+        },
+        {
+          "text": "What is the most abundant gas in Earth's atmosphere?",
+          "answers": [
+            "Oxygen",
+            "Carbon dioxide",
+            "Nitrogen",
+            "Hydrogen"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Nitrogen makes up about 78% of Earth's atmosphere, while oxygen makes up about 21%."
+        },
+        {
+          "text": "Which type of rock is formed from cooled magma or lava?",
+          "answers": [
+            "Sedimentary",
+            "Metamorphic",
+            "Igneous",
+            "Composite"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Igneous rocks form when molten rock (magma or lava) cools and solidifies."
+        },
+        {
+          "text": "What is the name of the process by which plants make their own food?",
+          "answers": [
+            "Respiration",
+            "Photosynthesis",
+            "Transpiration",
+            "Fermentation"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Photosynthesis is the process where plants use sunlight, carbon dioxide, and water to produce glucose and oxygen."
+        },
+        {
+          "text": "Which subatomic particle has no electric charge?",
+          "answers": [
+            "Proton",
+            "Electron",
+            "Neutron",
+            "Positron"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Neutrons are electrically neutral particles found in the nucleus of atoms, along with positively charged protons."
+        },
+        {
+          "text": "What is the name of the boundary that marks the edge of a black hole's event horizon?",
+          "answers": [
+            "Schwarzschild radius",
+            "Chandrasekhar limit",
+            "Roche limit",
+            "Hubble radius"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The Schwarzschild radius defines the event horizon of a black hole - the point of no return where escape velocity exceeds the speed of light."
+        },
+        {
+          "text": "What is the chemical symbol for gold?",
+          "answers": [
+            "Go",
+            "Gl",
+            "Au",
+            "Ag"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The chemical symbol for gold is Au, derived from the Latin word 'aurum'."
+        },
+        {
           "text": "Which planet has the most moons?",
           "answers": [
             "Jupiter",
@@ -257,6 +455,105 @@ export default {
     {
       "name": "Geography",
       "questions": [
+        {
+          "text": "What is the capital of Canada?",
+          "answers": [
+            "Toronto",
+            "Vancouver",
+            "Montreal",
+            "Ottawa"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Ottawa is the capital city of Canada, located in the province of Ontario along the Ottawa River."
+        },
+        {
+          "text": "The Nile River flows through which continent?",
+          "answers": [
+            "Asia",
+            "South America",
+            "Africa",
+            "Europe"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The Nile River flows through northeastern Africa, passing through countries like Egypt, Sudan, and Uganda before emptying into the Mediterranean Sea."
+        },
+        {
+          "text": "Mount Everest is located on the border between which two countries?",
+          "answers": [
+            "India and China",
+            "Nepal and China",
+            "Nepal and India",
+            "Bhutan and China"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Mount Everest sits on the border between Nepal and China (Tibet), with the summit marking the boundary between these two nations."
+        },
+        {
+          "text": "Which U.S. state has the most time zones?",
+          "answers": [
+            "California",
+            "Texas",
+            "Alaska",
+            "Hawaii"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Alaska spans four time zones: Hawaii-Aleutian Time, Alaska Time, and parts of Pacific and Mountain Time zones due to the Aleutian Islands extending far west."
+        },
+        {
+          "text": "The Ring of Fire is located around which ocean?",
+          "answers": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Pacific Ocean",
+            "Arctic Ocean"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The Ring of Fire is a belt of volcanic activity and earthquakes that circles the Pacific Ocean, containing about 75% of the world's active volcanoes."
+        },
+        {
+          "text": "Which European country has the most official languages?",
+          "answers": [
+            "Switzerland",
+            "Belgium",
+            "Luxembourg",
+            "Finland"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Switzerland has four official languages: German, French, Italian, and Romansh, making it the European country with the most official languages."
+        },
+        {
+          "text": "Lake Baikal, the world's deepest freshwater lake, is located in which country?",
+          "answers": [
+            "Mongolia",
+            "China",
+            "Kazakhstan",
+            "Russia"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Lake Baikal is located in southern Russia, near the border with Mongolia. It contains about 20% of the world's unfrozen freshwater and reaches depths of over 1,600 meters."
+        },
+        {
+          "text": "The Tropic of Capricorn passes through which of these countries?",
+          "answers": [
+            "Mexico",
+            "Egypt",
+            "Australia",
+            "India"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The Tropic of Capricorn passes through Australia, along with several other countries in the Southern Hemisphere including Brazil, South Africa, and Chile."
+        },
+        {
+          "text": "Which strait separates Europe from Africa?",
+          "answers": [
+            "Bering Strait",
+            "Strait of Gibraltar",
+            "Bosphorus Strait",
+            "Strait of Hormuz"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The Strait of Gibraltar separates Europe (Spain) from Africa (Morocco) and connects the Atlantic Ocean to the Mediterranean Sea. At its narrowest point, it's only about 14 kilometers wide."
+        },
         {
           "text": "What is the capital of Australia?",
           "answers": [
@@ -383,6 +680,116 @@ export default {
     {
       "name": "Pop Culture",
       "questions": [
+        {
+          "text": "Which movie won the Academy Award for Best Picture in 2020?",
+          "answers": [
+            "1917",
+            "Joker",
+            "Parasite",
+            "Once Upon a Time in Hollywood"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Parasite made history as the first non-English language film to win Best Picture at the 92nd Academy Awards."
+        },
+        {
+          "text": "What is the name of the coffee shop in the TV show 'Friends'?",
+          "answers": [
+            "Central Perk",
+            "The Grind",
+            "Java Joe's",
+            "Café Nervosa"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Central Perk was the main hangout spot for the Friends gang throughout the series, featuring the iconic orange couch."
+        },
+        {
+          "text": "Which singer holds the record for the most Grammy Awards won by any artist?",
+          "answers": [
+            "Taylor Swift",
+            "Adele",
+            "Beyoncé",
+            "Alison Krauss"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Beyoncé broke the all-time Grammy record in February 2023, surpassing classical conductor Georg Solti with 32 total wins."
+        },
+        {
+          "text": "In which Marvel movie did Spider-Man first appear in the MCU?",
+          "answers": [
+            "Spider-Man: Homecoming",
+            "Avengers: Infinity War",
+            "Captain America: Civil War",
+            "Avengers: Endgame"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Tom Holland's Spider-Man made his MCU debut in Captain America: Civil War (2016) before getting his own solo film."
+        },
+        {
+          "text": "Which reality TV family starred in a show that ran for 20 seasons ending in 2021?",
+          "answers": [
+            "The Osbournes",
+            "The Kardashians",
+            "The Real Housewives",
+            "Duck Dynasty"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Keeping Up with the Kardashians ran for 20 seasons from 2007 to 2021, making the family global celebrities."
+        },
+        {
+          "text": "What was Elvis Presley's middle name?",
+          "answers": [
+            "Aaron",
+            "Alexander",
+            "Andrew",
+            "Anthony"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Elvis Aaron Presley was born in 1935, though his name was sometimes spelled 'Aron' on official documents."
+        },
+        {
+          "text": "Which streaming platform produced the series 'Stranger Things'?",
+          "answers": [
+            "Hulu",
+            "Amazon Prime",
+            "Netflix",
+            "Disney+"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Netflix's Stranger Things premiered in 2016 and became one of the platform's most successful original series."
+        },
+        {
+          "text": "Who directed the 1975 thriller movie 'Jaws'?",
+          "answers": [
+            "George Lucas",
+            "Steven Spielberg",
+            "Martin Scorsese",
+            "Francis Ford Coppola"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Steven Spielberg directed Jaws at age 26, launching his career and creating the summer blockbuster phenomenon."
+        },
+        {
+          "text": "Which artist painted the album cover for The Velvet Underground & Nico?",
+          "answers": [
+            "Pablo Picasso",
+            "Jackson Pollock",
+            "Andy Warhol",
+            "Keith Haring"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Andy Warhol designed the famous banana cover for the 1967 album and also managed the band for a time."
+        },
+        {
+          "text": "What does the 'K' stand for in J.K. Rowling's name?",
+          "answers": [
+            "Katherine",
+            "Kathleen",
+            "Karen",
+            "Kimberly"
+          ],
+          "correctAnswer": 1,
+          "explanation": "J.K. Rowling's full name is Joanne Kathleen Rowling, though she added the 'K' from her grandmother's name for publishing."
+        },
         {
           "text": "Who played Iron Man in the Marvel Cinematic Universe?",
           "answers": [
@@ -532,6 +939,94 @@ export default {
           "explanation": "A soccer (football) team has 11 players on the field, including the goalkeeper."
         },
         {
+          "text": "What is the maximum score possible in ten-pin bowling?",
+          "answers": [
+            "200",
+            "250",
+            "300",
+            "350"
+          ],
+          "correctAnswer": 2,
+          "explanation": "A perfect game in bowling consists of 12 consecutive strikes, resulting in a maximum score of 300."
+        },
+        {
+          "text": "Which tennis tournament is played on clay courts?",
+          "answers": [
+            "Wimbledon",
+            "US Open",
+            "Australian Open",
+            "French Open"
+          ],
+          "correctAnswer": 3,
+          "explanation": "The French Open (Roland Garros) is the only Grand Slam tournament played on clay courts, giving it a distinctive red surface."
+        },
+        {
+          "text": "In American football, how many points is a touchdown worth?",
+          "answers": [
+            "3",
+            "6",
+            "7",
+            "8"
+          ],
+          "correctAnswer": 1,
+          "explanation": "A touchdown is worth 6 points. The extra point conversion that usually follows is worth 1 additional point."
+        },
+        {
+          "text": "What does NHL stand for?",
+          "answers": [
+            "National Hockey League",
+            "North Hockey League",
+            "National Hockey League",
+            "New Hockey League"
+          ],
+          "correctAnswer": 0,
+          "explanation": "NHL stands for National Hockey League, the premier professional ice hockey league in North America."
+        },
+        {
+          "text": "In golf, what is the term for scoring one stroke under par?",
+          "answers": [
+            "Eagle",
+            "Birdie",
+            "Albatross",
+            "Bogey"
+          ],
+          "correctAnswer": 1,
+          "explanation": "A birdie is scoring one stroke under par on a hole. An eagle is two under, and an albatross is three under par."
+        },
+        {
+          "text": "Which country has won the most FIFA World Cup titles?",
+          "answers": [
+            "Germany",
+            "Argentina",
+            "Brazil",
+            "Italy"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Brazil has won the FIFA World Cup 5 times (1958, 1962, 1970, 1994, 2002), more than any other country."
+        },
+        {
+          "text": "In which Olympic sport would you see a pommel horse?",
+          "answers": [
+            "Track and field",
+            "Gymnastics",
+            "Equestrian",
+            "Wrestling"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The pommel horse is an apparatus used in men's artistic gymnastics, where athletes perform circular movements and flairs."
+        },
+        {
+          "text": "What is the regulation height of a basketball hoop?",
+          "answers": [
+            "9 feet",
+            "10 feet",
+            "11 feet",
+            "12 feet"
+          ],
+          "correctAnswer": 1,
+          "explanation": "A basketball hoop is regulation height when the rim sits exactly 10 feet (3.05 meters) above the ground."
+        },
+        {
           "text": "Which country won the first FIFA World Cup in 1930?",
           "answers": [
             "Brazil",
@@ -635,6 +1130,105 @@ export default {
     {
       "name": "Literature",
       "questions": [
+        {
+          "text": "Who wrote 'To Kill a Mockingbird'?",
+          "answers": [
+            "Harper Lee",
+            "Flannery O'Connor",
+            "Toni Morrison",
+            "Maya Angelou"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Harper Lee published 'To Kill a Mockingbird' in 1960, winning the Pulitzer Prize for Fiction in 1961. It remains one of the most widely read novels in American literature."
+        },
+        {
+          "text": "In George Orwell's '1984', what is the name of the totalitarian leader?",
+          "answers": [
+            "Big Leader",
+            "Big Brother",
+            "The Overseer",
+            "Supreme Commander"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Big Brother is the omnipresent dictator in Orwell's dystopian novel '1984', representing the face of the Party that controls every aspect of life in Oceania."
+        },
+        {
+          "text": "Which epic poem begins with the line 'Sing, O goddess, the anger of Achilles'?",
+          "answers": [
+            "The Odyssey",
+            "The Aeneid",
+            "The Iliad",
+            "Paradise Lost"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Homer's 'The Iliad' opens with this famous invocation, calling upon the muse to sing about Achilles' rage during the Trojan War."
+        },
+        {
+          "text": "What is the first book in J.K. Rowling's Harry Potter series?",
+          "answers": [
+            "Harry Potter and the Chamber of Secrets",
+            "Harry Potter and the Philosopher's Stone",
+            "Harry Potter and the Goblet of Fire",
+            "Harry Potter and the Prisoner of Azkaban"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Published in 1997, 'Harry Potter and the Philosopher's Stone' (titled 'Sorcerer's Stone' in the US) introduced readers to the wizarding world and Harry's journey."
+        },
+        {
+          "text": "In which Shakespeare play does the character Lady Macbeth appear?",
+          "answers": [
+            "Othello",
+            "King Lear",
+            "Macbeth",
+            "Hamlet"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Lady Macbeth is the ambitious wife of the title character in Shakespeare's tragedy 'Macbeth', famous for her 'Out, damned spot!' sleepwalking scene."
+        },
+        {
+          "text": "What literary movement was Jack Kerouac associated with?",
+          "answers": [
+            "The Lost Generation",
+            "The Beat Generation",
+            "Transcendentalism",
+            "The Harlem Renaissance"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Jack Kerouac was a key figure in the Beat Generation, a literary movement of the 1950s that rejected conventional society. His novel 'On the Road' became a defining work of the movement."
+        },
+        {
+          "text": "Which novel features the character Jay Gatsby?",
+          "answers": [
+            "The Catcher in the Rye",
+            "The Great Gatsby",
+            "Tender Is the Night",
+            "This Side of Paradise"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Jay Gatsby is the mysterious millionaire protagonist of F. Scott Fitzgerald's 'The Great Gatsby' (1925), a novel that captures the excess and disillusionment of the Jazz Age."
+        },
+        {
+          "text": "Who wrote 'The Metamorphosis', a story about a man who transforms into an insect?",
+          "answers": [
+            "Franz Kafka",
+            "Thomas Mann",
+            "Hermann Hesse",
+            "Stefan Zweig"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Franz Kafka wrote 'The Metamorphosis' in 1915, telling the surreal story of Gregor Samsa who wakes up transformed into a giant insect-like creature."
+        },
+        {
+          "text": "In Dante's 'Divine Comedy', which guide leads him through Hell and Purgatory?",
+          "answers": [
+            "Homer",
+            "Aristotle",
+            "Virgil",
+            "Ovid"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The Roman poet Virgil serves as Dante's guide through Hell (Inferno) and Purgatory (Purgatorio) in the 'Divine Comedy'. Virgil was chosen because Dante greatly admired his epic poem 'The Aeneid'."
+        },
         {
           "text": "Who wrote 'Pride and Prejudice'?",
           "answers": [
@@ -762,6 +1356,94 @@ export default {
       "name": "Food and Drink",
       "questions": [
         {
+          "text": "Which spice is derived from the Crocus flower?",
+          "answers": [
+            "Turmeric",
+            "Paprika",
+            "Saffron",
+            "Cardamom"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Saffron comes from the stigmas of the Crocus sativus flower. It's one of the world's most expensive spices by weight and gives dishes a distinctive golden color and delicate flavor."
+        },
+        {
+          "text": "What type of pastry is used to make profiteroles?",
+          "answers": [
+            "Puff pastry",
+            "Choux pastry",
+            "Shortcrust pastry",
+            "Filo pastry"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Profiteroles are made from choux pastry, a light pastry dough that puffs up when baked due to its high moisture content. The hollow shells are then filled with cream or ice cream."
+        },
+        {
+          "text": "Which wine region is Champagne from?",
+          "answers": [
+            "Burgundy, France",
+            "Tuscany, Italy",
+            "Champagne, France",
+            "Rioja, Spain"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Champagne can only be called Champagne if it comes from the Champagne region of France. Similar sparkling wines from other regions must use different names like Prosecco or Cava."
+        },
+        {
+          "text": "What is the primary flavor component in vanilla?",
+          "answers": [
+            "Vanillic acid",
+            "Vanillin",
+            "Coumarin",
+            "Eugenol"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Vanillin is the primary flavor compound that gives vanilla its characteristic taste and aroma. It can be extracted from vanilla beans or produced synthetically."
+        },
+        {
+          "text": "Which cooking method involves cooking food slowly in fat at a low temperature?",
+          "answers": [
+            "Braising",
+            "Confit",
+            "Poaching",
+            "Steaming"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Confit is a French cooking technique where food (traditionally duck or goose) is slowly cooked and preserved in its own fat at low temperatures, resulting in incredibly tender meat."
+        },
+        {
+          "text": "What is the Japanese term for the 'fifth taste' alongside sweet, sour, salty, and bitter?",
+          "answers": [
+            "Kokumi",
+            "Umami",
+            "Astringent",
+            "Pungent"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Umami, discovered by Japanese scientist Kikunae Ikeda, describes a savory, meaty taste. It's found in foods like mushrooms, aged cheeses, tomatoes, and soy sauce."
+        },
+        {
+          "text": "Which coffee brewing method uses a plunger to separate grounds from the liquid?",
+          "answers": [
+            "Pour over",
+            "French press",
+            "Espresso",
+            "Cold brew"
+          ],
+          "correctAnswer": 1,
+          "explanation": "A French press (also called a cafetière) uses a metal mesh plunger to separate coffee grounds from the brewed coffee after steeping for several minutes."
+        },
+        {
+          "text": "What is the difference between baking soda and baking powder?",
+          "answers": [
+            "They are the same thing",
+            "Baking soda needs acid to activate, baking powder doesn't",
+            "Baking powder needs acid to activate, baking soda doesn't",
+            "Baking soda is for sweet recipes, baking powder is for savory"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Baking soda (sodium bicarbonate) needs an acidic ingredient to activate and create lift. Baking powder contains both an acid and a base, so it can work on its own when mixed with liquid."
+        },
+        {
           "text": "Which country is the origin of the dish Paella?",
           "answers": [
             "Italy",
@@ -888,6 +1570,105 @@ export default {
       "name": "Technology",
       "questions": [
         {
+          "text": "What does 'HTTP' stand for?",
+          "answers": [
+            "HyperText Transfer Protocol",
+            "High Tech Transfer Program",
+            "Home Terminal Text Protocol",
+            "Hardware Text Transmission Process"
+          ],
+          "correctAnswer": 0,
+          "explanation": "HTTP stands for HyperText Transfer Protocol, which is the foundation of data communication on the World Wide Web."
+        },
+        {
+          "text": "Which company developed the first commercially successful microprocessor, the Intel 4004?",
+          "answers": [
+            "IBM",
+            "Intel",
+            "AMD",
+            "Motorola"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Intel developed the 4004 microprocessor in 1971, which was the first commercially successful microprocessor and launched the microcomputer revolution."
+        },
+        {
+          "text": "In what year was the first iPhone released?",
+          "answers": [
+            "2006",
+            "2007",
+            "2008",
+            "2009"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The first iPhone was released by Apple on June 29, 2007, revolutionizing the smartphone industry."
+        },
+        {
+          "text": "What does 'GPU' stand for in computer hardware?",
+          "answers": [
+            "General Processing Unit",
+            "Graphics Processing Unit",
+            "Gaming Performance Unit",
+            "Graphical Pixel Unit"
+          ],
+          "correctAnswer": 1,
+          "explanation": "GPU stands for Graphics Processing Unit, a specialized processor designed to handle graphics rendering and parallel processing tasks."
+        },
+        {
+          "text": "Which programming paradigm is Haskell primarily known for?",
+          "answers": [
+            "Object-oriented programming",
+            "Procedural programming",
+            "Functional programming",
+            "Assembly programming"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Haskell is a purely functional programming language, meaning it emphasizes functions as first-class citizens and avoids changing state or mutable data."
+        },
+        {
+          "text": "What is the maximum theoretical speed of USB 3.0?",
+          "answers": [
+            "480 Mbps",
+            "5 Gbps",
+            "10 Gbps",
+            "20 Gbps"
+          ],
+          "correctAnswer": 1,
+          "explanation": "USB 3.0 has a maximum theoretical transfer speed of 5 Gbps (gigabits per second), which is about 10 times faster than USB 2.0."
+        },
+        {
+          "text": "Which consensus algorithm does Bitcoin use for its blockchain?",
+          "answers": [
+            "Proof of Stake",
+            "Proof of Work",
+            "Delegated Proof of Stake",
+            "Proof of Authority"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Bitcoin uses Proof of Work (PoW) as its consensus mechanism, where miners compete to solve computationally intensive puzzles to validate transactions and create new blocks."
+        },
+        {
+          "text": "What does 'IoT' stand for?",
+          "answers": [
+            "Internet of Things",
+            "Input/Output Technology",
+            "Integrated Operations Terminal",
+            "Intelligence Operations Toolkit"
+          ],
+          "correctAnswer": 0,
+          "explanation": "IoT stands for Internet of Things, referring to the network of physical devices embedded with sensors, software, and connectivity that enables them to collect and exchange data."
+        },
+        {
+          "text": "Which of these is NOT a valid IPv4 address?",
+          "answers": [
+            "192.168.1.1",
+            "10.0.0.255",
+            "172.16.300.1",
+            "127.0.0.1"
+          ],
+          "correctAnswer": 2,
+          "explanation": "172.16.300.1 is not a valid IPv4 address because each octet in an IPv4 address must be between 0 and 255. The third octet '300' exceeds this range."
+        },
+        {
           "text": "Who is considered the co-founder of Apple Inc. along with Steve Jobs?",
           "answers": [
             "Bill Gates",
@@ -1013,6 +1794,153 @@ export default {
     {
       "name": "Animals",
       "questions": [
+        {
+          "text": "Which animal is known to have three hearts?",
+          "answers": [
+            "Octopus",
+            "Squid",
+            "Jellyfish",
+            "Starfish"
+          ],
+          "correctAnswer": 0,
+          "explanation": "An octopus has three hearts - two pump blood to the gills, while the third pumps blood to the rest of the body."
+        },
+        {
+          "text": "What is the fastest land animal?",
+          "answers": [
+            "Lion",
+            "Cheetah",
+            "Leopard",
+            "Gazelle"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The cheetah can reach speeds of up to 70 mph (113 km/h), making it the fastest land animal."
+        },
+        {
+          "text": "Which bird is unable to fly?",
+          "answers": [
+            "Eagle",
+            "Penguin",
+            "Sparrow",
+            "Robin"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Penguins are flightless birds that have adapted their wings for swimming instead of flying."
+        },
+        {
+          "text": "What type of animal is a Komodo dragon?",
+          "answers": [
+            "Snake",
+            "Lizard",
+            "Crocodile",
+            "Turtle"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The Komodo dragon is the world's largest living species of lizard, found in Indonesia."
+        },
+        {
+          "text": "Which mammal is known to lay eggs?",
+          "answers": [
+            "Kangaroo",
+            "Platypus",
+            "Koala",
+            "Wombat"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The platypus is one of only two mammals (along with echidnas) that lay eggs instead of giving birth to live young."
+        },
+        {
+          "text": "What is the largest whale species?",
+          "answers": [
+            "Humpback whale",
+            "Sperm whale",
+            "Blue whale",
+            "Orca"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The blue whale is not only the largest whale but also the largest animal ever known to have lived on Earth."
+        },
+        {
+          "text": "Which animal has the longest lifespan?",
+          "answers": [
+            "Elephant",
+            "Tortoise",
+            "Whale",
+            "Parrot"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Some tortoise species, particularly the Galápagos tortoise, can live over 150 years, with some records suggesting even longer lifespans."
+        },
+        {
+          "text": "What do pandas primarily eat?",
+          "answers": [
+            "Fish",
+            "Bamboo",
+            "Honey",
+            "Insects"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Giant pandas are specialized to eat bamboo, which makes up about 99% of their diet."
+        },
+        {
+          "text": "Which animal is known for its ability to change colors?",
+          "answers": [
+            "Chameleon",
+            "Iguana",
+            "Gecko",
+            "Skink"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Chameleons are famous for their ability to change colors, which they do for communication, temperature regulation, and camouflage."
+        },
+        {
+          "text": "What is the smallest mammal in the world?",
+          "answers": [
+            "Mouse",
+            "Shrew",
+            "Bumblebee bat",
+            "Hamster"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The bumblebee bat, also known as Kitti's hog-nosed bat, weighs only about 2 grams and is the world's smallest mammal."
+        },
+        {
+          "text": "Which animal has the most powerful bite force?",
+          "answers": [
+            "Great white shark",
+            "Crocodile",
+            "Hippopotamus",
+            "Lion"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Saltwater crocodiles have the strongest bite force of any animal, measuring over 3,700 pounds per square inch."
+        },
+        {
+          "text": "What is unique about a giraffe's tongue?",
+          "answers": [
+            "It's forked like a snake's",
+            "It's blue-black in color",
+            "It's covered in spikes",
+            "It's transparent"
+          ],
+          "correctAnswer": 1,
+          "explanation": "A giraffe's tongue is dark blue-black in color, which helps protect it from sunburn as they spend long hours feeding on tall trees."
+        },
+        {
+          "text": "Which insect can lift objects many times its own body weight?",
+          "answers": [
+            "Butterfly",
+            "Ant",
+            "Bee",
+            "Grasshopper"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Ants can lift objects 10-50 times their own body weight, making them one of the strongest creatures relative to their size."
+        }
+      ]
+    }
+  ]
+}
         {
           "text": "What is the largest species of big cat in the world?",
           "answers": [
