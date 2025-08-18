@@ -12,6 +12,12 @@ export const subjects = [
     dataFile: 'subject-data-roman-empire.js'
   },
   {
+    name: 'Gardening',
+    description: 'Refresh your knowledge about plants and gardening techniques',
+    path: 'gardening',
+    dataFile: 'subject-data-gardening.js'
+  },
+  {
     name: 'Trivia',
     description: 'General knowledge questions across various topics',
     path: 'trivia',
@@ -34,6 +40,9 @@ export const loadSubjectData = async (subjectPath) => {
         break;
       case 'roman-empire':
         data = await import('../data/subject-data-roman-empire.js');
+        break;
+      case 'gardening':
+        data = await import('../data/subject-data-gardening.js');
         break;
       case 'trivia':
         data = await import('../data/subject-data-trivia.js');

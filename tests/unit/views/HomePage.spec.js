@@ -35,7 +35,7 @@ describe('HomePage.vue', () => {
 
     // Check that we have the correct number of subject cards
     const subjectCards = wrapper.findAll('.bg-white.shadow.rounded-lg.p-4')
-    expect(subjectCards.length).toBe(3)
+    expect(subjectCards.length).toBe(4)
 
     // Check that the subjects are displayed
     expect(wrapper.text()).toContain('Spanish')
@@ -43,6 +43,8 @@ describe('HomePage.vue', () => {
 
     expect(wrapper.text()).toContain('Roman Empire')
     expect(wrapper.text()).toContain('Explore the history and culture of ancient Rome')
+    
+    expect(wrapper.text()).toContain('Gardening')
 
     expect(wrapper.text()).toContain('Trivia')
     expect(wrapper.text()).toContain('General knowledge questions across various topics')
