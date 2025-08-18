@@ -1936,11 +1936,7 @@ export default {
           ],
           "correctAnswer": 1,
           "explanation": "Ants can lift objects 10-50 times their own body weight, making them one of the strongest creatures relative to their size."
-        }
-      ]
-    }
-  ]
-}
+        },
         {
           "text": "What is the largest species of big cat in the world?",
           "answers": [
