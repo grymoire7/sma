@@ -69,12 +69,15 @@ The built files will be in the `dist` directory and can be served using any stat
 
 ### Adding subjects and updating questions
 
-1. To add a new subject or update questions, modify the JSON files in the
-   `src/data` directory. Each subject has its own file containing an array of
-   questions. Follow the existing format to ensure compatibility.
+1. To add a new subject or update questions, modify the JavaScript files in the
+   `src/data` directory. Each subject has its own file (e.g., `subject-data-spanish.js`)
+   that exports a default object containing the subject's questions organized by categories.
+   Follow the existing format to ensure compatibility.
 
-2. If you are adding a new subject, add a new entry in `src/config/subjects.js`
-   in the `subjects` array for the new subject.
+2. If you are adding a new subject, you need to:
+   - Create a new data file in `src/data/` (e.g., `subject-data-newsubject.js`)
+   - Add a new entry in `src/config/subjects.js` in the `subjects` array
+   - Add a new case in the `loadSubjectData` function's switch statement
 
 That's it! The app will automatically pick up the new subject and/or questions and display them.
 

@@ -26,13 +26,21 @@ export const getSubjectByPath = (path) => {
 
 // Helper function to load subject data dynamically
 export const loadSubjectData = async (subjectPath) => {
-  const subject = getSubjectByPath(subjectPath);
-  if (!subject) {
-    throw new Error(`Unknown subject: ${subjectPath}`);
-  }
-  
   try {
-    const data = await import(`../data/${subject.dataFile}` /* @vite-ignore */);
+    let data;
+    switch (subjectPath) {
+      case 'spanish':
+        data = await import('../data/subject-data-spanish.js');
+        break;
+      case 'roman-empire':
+        data = await import('../data/subject-data-roman-empire.js');
+        break;
+      case 'trivia':
+        data = await import('../data/subject-data-trivia.js');
+        break;
+      default:
+        throw new Error(`Unknown subject: ${subjectPath}`);
+    }
     return data.default;
   } catch (error) {
     console.error('Error loading subject data:', error);
