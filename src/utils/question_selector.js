@@ -86,7 +86,7 @@ function getQuestionIndicesForDayOfYear(dayOfYear, categories, categoryCount, qu
       throw new Error(`Category ${categoryIndex} has no questions available`);
     }
 
-    seenQuestions = (dayOfYear - 1) * categories.length + i;
+    const seenQuestions = (dayOfYear - 1) * categories.length + i;
     const questionIndex = Math.floor(seenQuestions / categoryCount) % questionCount;
     indices.push(questionIndex);
   }
@@ -98,7 +98,7 @@ function getQuestionIndicesForDate(date, categoryCount, questionCounts) {
   const dayOfYear = getDayOfYear(date);
   const categories = getCategoriesForDay(dayOfYear, categoryCount);
 
-  idxs = getQuestionIndicesForDayOfYear(dayOfYear, categories, categoryCount, questionCounts);
+  const idxs = getQuestionIndicesForDayOfYear(dayOfYear, categories, categoryCount, questionCounts);
   // console.log(`Date ${date.toISOString()}: Day: ${dayOfYear}, Categories ${categories}, Question Indices ${idxs}`);
   
   return idxs;
