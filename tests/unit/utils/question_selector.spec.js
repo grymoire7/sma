@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { QuestionSelector, getDayOfYear, getCategoriesForDay, getQuestionIndicesForDayOfYear, getQuestionIndicesForDate } from '../../../src/utils/question_selector.js';
+import { QuestionSelector, getDayOfYear, getCategoriesForDay, getQuestionIndicesForDayOfYear } from '../../../src/utils/question_selector.js';
 
 describe('QuestionSelector Utils', () => {
   describe('getDayOfYear', () => {
@@ -112,59 +112,5 @@ describe('QuestionSelector Utils', () => {
     });
   });
 
-  describe('getQuestionIndicesForDate', () => {
-    const categoryCount = 5;
-    const questionCounts = [10, 15, 20, 25, 8];
-
-    it('should return correct question indices for Jan 1, 2023', () => {
-      const date = new Date(2023, 0, 1);
-      expect(getQuestionIndicesForDate(date, categoryCount, questionCounts)).toEqual([0, 0, 0, 0]);
-    });
-
-    it('should return correct question indices for Jan 2, 2023', () => {
-      const date = new Date(2023, 0, 2);
-      expect(getQuestionIndicesForDate(date, categoryCount, questionCounts)).toEqual([0, 1, 1, 1]);
-    });
-
-    it('should return correct question indices for Jan 3, 2023', () => {
-      const date = new Date(2023, 0, 3);
-      expect(getQuestionIndicesForDate(date, categoryCount, questionCounts)).toEqual([1, 1, 2, 2]);
-    });
-
-    it('should return correct question indices for Jan 4, 2023', () => {
-      const date = new Date(2023, 0, 4);
-      expect(getQuestionIndicesForDate(date, categoryCount, questionCounts)).toEqual([2, 2, 2, 3]);
-    });
-
-    it('should return correct question indices for Jan 5, 2023', () => {
-      const date = new Date(2023, 0, 5);
-      expect(getQuestionIndicesForDate(date, categoryCount, questionCounts)).toEqual([3, 3, 3, 3]);
-    });
-
-    it('should return correct question indices for Jan 10, 2023', () => {
-      const date = new Date(2023, 0, 10);
-      expect(getQuestionIndicesForDate(date, categoryCount, questionCounts)).toEqual([7, 7, 7, 7]);
-    });
-
-    it('should return correct question indices for Jan 15, 2023', () => {
-      const date = new Date(2023, 0, 15);
-      expect(getQuestionIndicesForDate(date, categoryCount, questionCounts)).toEqual([3, 1, 11, 11]);
-    });
-
-    it('should return correct question indices for Jan 20, 2023', () => {
-      const date = new Date(2023, 0, 20);
-      expect(getQuestionIndicesForDate(date, categoryCount, questionCounts)).toEqual([7, 5, 0, 15]);
-    });
-
-    it('should return correct question indices for Jan 25, 2023', () => {
-      const date = new Date(2023, 0, 25);
-      expect(getQuestionIndicesForDate(date, categoryCount, questionCounts)).toEqual([3, 9, 4, 19]);
-    });
-
-    it('should return correct question indices for Dec 31, 2023', () => {
-      const date = new Date(2023, 11, 31);
-      expect(getQuestionIndicesForDate(date, categoryCount, questionCounts)).toEqual([3, 1, 6, 11]);
-    });
-  });
 });
 

@@ -94,13 +94,14 @@ function getQuestionIndicesForDayOfYear(dayOfYear, categories, categoryCount, qu
   return indices;
 }
 
+
 function getQuestionDataForDate(date, categoryCount, questionCounts) {
   const dayOfYear = getDayOfYear(date);
   const category_indices = getCategoriesForDay(dayOfYear, categoryCount);
-  const question_indices = getQuestionIndicesForDayOfYear(dayOfYear, categories, categoryCount, questionCounts);
+  const question_indices = getQuestionIndicesForDayOfYear(dayOfYear, category_indices, categoryCount, questionCounts);
   // console.log(`Date ${date.toISOString()}: Day: ${dayOfYear}, Category Indices ${category_indices}, Question Indices ${question_indices}`);
   
-  response = {
+  const response = {
     dayOfYear: dayOfYear,
     categoryIndices: category_indices,
     questionIndices: question_indices
