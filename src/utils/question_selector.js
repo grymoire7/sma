@@ -118,4 +118,4 @@ function getQuestionDataForDate(date, categoryCount, questionCounts) {
   return response;
 }
 
-module.exports = { QuestionSelector, getDayOfYear, getCategoriesForDay, getQuestionIndicesForDayOfYear, getQuestionDataForDate };
+export { QuestionSelector, getDayOfYear, getCategoriesForDay, getQuestionIndicesForDayOfYear, getQuestionDataForDate };

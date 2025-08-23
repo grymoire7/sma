@@ -117,6 +117,7 @@
 import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { loadSubjectData } from '../config/subjects.js';
+import { QuestionSelector } from '../utils/question_selector.js';
 
 const route = useRoute();
 const router = useRouter();
@@ -228,38 +229,25 @@ const initializeQuiz = () => {
     return;
   }
 
-  // Get today's date as a string to use as a seed
-  const dateStr = new Date().toISOString().split('T')[0];
+  // Get question counts for each category
+  const questionCounts = subjectData.value.questionCategories.map(category => category.questions.length);
   
-  // Simple seeded random function
-  const seededRandom = (seed) => {
-    const x = Math.sin(seed) * 10000;
-    return x - Math.floor(x);
-  };
+  // Create QuestionSelector instance
+  const questionSelector = new QuestionSelector(subjectData.value.questionCategories.length, questionCounts);
   
-  // Shuffle array using seeded random
-  const shuffleArray = (array, seed) => {
-    if (!array || !Array.isArray(array)) return [];
-    const shuffled = [...array];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(seededRandom(seed + i) * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-  };
+  // Get today's question data
+  const questionData = questionSelector.getQuestionDataForDate(new Date());
   
-  // Create a seed from the date string and subject
-  const seed = dateStr.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) + 
-               subject.value.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  // Select categories based on the indices from QuestionSelector
+  selectedCategories.value = questionData.categoryIndices.map(index => 
+    subjectData.value.questionCategories[index]
+  );
   
-  // Shuffle and select categories
-  const shuffledCategories = shuffleArray(subjectData.value.questionCategories, seed);
-  selectedCategories.value = shuffledCategories.slice(0, 4);
-  
-  // Select one random question from each category
-  selectedQuestions.value = selectedCategories.value.map((category, index) => {
-    const questions = shuffleArray(category.questions, seed + index);
-    return questions[0];
+  // Select questions based on the indices from QuestionSelector
+  selectedQuestions.value = questionData.categoryIndices.map((categoryIndex, i) => {
+    const category = subjectData.value.questionCategories[categoryIndex];
+    const questionIndex = questionData.questionIndices[i];
+    return category.questions[questionIndex];
   });
   
   // Reset user state
