@@ -46,23 +46,23 @@ describe('QuestionSelector Utils', () => {
     });
 
     it('should return correct categories for day 2 with 5 categories', () => {
-      expect(getCategoriesForDay(2, 5)).toEqual([1, 2, 3, 4]);
+      expect(getCategoriesForDay(2, 5)).toEqual([4, 0, 1, 2]);
     });
 
     it('should return correct categories for day 3 with 5 categories', () => {
-      expect(getCategoriesForDay(3, 5)).toEqual([2, 3, 4, 0]);
+      expect(getCategoriesForDay(3, 5)).toEqual([3, 4, 0, 1]);
     });
 
     it('should return correct categories for day 4 with 5 categories', () => {
-      expect(getCategoriesForDay(4, 5)).toEqual([3, 4, 0, 1]);
+      expect(getCategoriesForDay(4, 5)).toEqual([2, 3, 4, 0]);
     });
 
     it('should return correct categories for day 5 with 5 categories', () => {
-      expect(getCategoriesForDay(5, 5)).toEqual([4, 0, 1, 2]);
+      expect(getCategoriesForDay(5, 5)).toEqual([1, 2, 3, 4]);
     });
 
     it('should return correct categories for day 365 with 5 categories', () => {
-      expect(getCategoriesForDay(365, 5)).toEqual([4, 0, 1, 2]);
+      expect(getCategoriesForDay(365, 5)).toEqual([1, 2, 3, 4]);
     });
   });
 
@@ -109,6 +109,64 @@ describe('QuestionSelector Utils', () => {
 
     it('should return correct question indices for day 365', () => {
       expect(getQuestionIndicesForDayOfYear(365, categories, categoryCount, questionCounts)).toEqual([1, 6, 11, 16]);
+    });
+  });
+
+  describe('QuestionSelector class', () => {
+    describe('getQuestionDataForDate', () => {
+      const categoryCount = 5;
+      const questionCounts = [10, 15, 20, 25, 8];
+      const selector = new QuestionSelector(categoryCount, questionCounts);
+
+      it('should return correct question data for Jan 1, 2023', () => {
+        const date = new Date(2023, 0, 1);
+        const result = selector.getQuestionDataForDate(date);
+        expect(result).toEqual({
+          dayOfYear: 1,
+          categoryIndices: [0, 1, 2, 3],
+          questionIndices: [0, 0, 0, 0]
+        });
+      });
+
+      it('should return correct question data for Jan 2, 2023', () => {
+        const date = new Date(2023, 0, 2);
+        const result = selector.getQuestionDataForDate(date);
+        expect(result).toEqual({
+          dayOfYear: 2,
+          categoryIndices: [4, 0, 1, 2],
+          questionIndices: [0, 1, 1, 1]
+        });
+      });
+
+      it('should return correct question data for Jan 3, 2023', () => {
+        const date = new Date(2023, 0, 3);
+        const result = selector.getQuestionDataForDate(date);
+        expect(result).toEqual({
+          dayOfYear: 3,
+          categoryIndices: [3, 4, 0, 1],
+          questionIndices: [1, 1, 2, 2]
+        });
+      });
+
+      it('should return correct question data for Jan 15, 2023', () => {
+        const date = new Date(2023, 0, 15);
+        const result = selector.getQuestionDataForDate(date);
+        expect(result).toEqual({
+          dayOfYear: 15,
+          categoryIndices: [1, 2, 3, 4],
+          questionIndices: [11, 11, 11, 3]
+        });
+      });
+
+      it('should return correct question data for Dec 31, 2023', () => {
+        const date = new Date(2023, 11, 31);
+        const result = selector.getQuestionDataForDate(date);
+        expect(result).toEqual({
+          dayOfYear: 365,
+          categoryIndices: [1, 2, 3, 4],
+          questionIndices: [6, 11, 16, 3]
+        });
+      });
     });
   });
 

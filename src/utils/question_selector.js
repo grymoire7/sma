@@ -49,12 +49,20 @@ function getCategoriesForDay(dayOfYear, categoryCount) {
     throw new Error('Day of year must be between 1 and 365');
   }
 
-  const startIndex = (dayOfYear - 1) % categoryCount;
+  // Fill categories with the next four categories in a rotating manner
+  // if categoryCount is 5 and...
+  //    dayOfYear is 1 then categories should be [0, 1, 2, 3]
+  //    dayOfYear is 2 then categories should be [4, 0, 1, 2]
+  //    dayOfYear is 3 then categories should be [3, 4, 0, 1]
+  //    dayOfYear is 4 then categories should be [2, 3, 4, 0]
+
+  const seenCategories = (dayOfYear - 1) * 4;
   const categories = [];
 
   for (let i = 0; i < 4; i++) {
-    categories.push((startIndex + i) % categoryCount);
+    categories.push((seenCategories + i) % categoryCount);
   }
+  
   return categories;
 }
 
